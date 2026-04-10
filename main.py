@@ -16,7 +16,7 @@ def input_keyword(keyword: str) -> str:
 def filter_text(text: str, keyword: str) -> str:
     parsed_text = ""
     for line in text.splitlines():
-        if keyword in line:
+        if keyword in line.split():
             parsed_text += line + "\n"
     
     return parsed_text
