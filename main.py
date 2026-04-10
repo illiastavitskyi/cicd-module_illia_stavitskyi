@@ -5,7 +5,7 @@ def read_file(filename: str) -> str:
     file = open(filename)
     text = file.read()
     file.close()
-    print(text)
+    
     return text
 
 def input_keyword(keyword: str) -> str:
@@ -13,13 +13,25 @@ def input_keyword(keyword: str) -> str:
     return keyword
 
 
+def filter_text(text: str, keyword: str) -> str:
+    parsed_text = ""
+    for line in text.splitlines():
+        if keyword in line:
+            parsed_text += line + "\n"
+    
+    return parsed_text
+
+
 
 def main():
-    print("hi")
+   # print("hi")
     text = read_file('test.txt')
-    print(text)
-    user_keyword =  input_keyword("fsjdfsj")
-    print(user_keyword)
+   # print(text)
+    user_keyword =  input_keyword("ab")
+   # print(user_keyword)
+
+    parsed_text = filter_text(text, user_keyword)
+    print(parsed_text)
 
     
 
