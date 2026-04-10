@@ -1,6 +1,5 @@
-import pytest
 from unittest.mock import mock_open, patch
-import main  
+import main
 
 
 def test_read_file():
