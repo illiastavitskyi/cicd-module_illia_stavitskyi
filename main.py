@@ -23,7 +23,7 @@ def filter_text(text: str, keyword: str) -> str:
 
 
 def save_text(text: str, filename:str):
-    with open(filename, 'a') as file:
+    with open(filename, 'w') as file:
         file.write(text)
 
 
