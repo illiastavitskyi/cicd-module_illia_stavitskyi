@@ -8,12 +8,18 @@ def read_file(filename: str) -> str:
     print(text)
     return text
 
+def input_keyword(keyword: str) -> str:
+    user_input = keyword 
+    return keyword
+
 
 
 def main():
     print("hi")
     text = read_file('test.txt')
     print(text)
+    user_keyword =  input_keyword("fsjdfsj")
+    print(user_keyword)
 
     
 
