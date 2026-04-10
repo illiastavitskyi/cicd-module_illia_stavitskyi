@@ -22,6 +22,11 @@ def filter_text(text: str, keyword: str) -> str:
     return parsed_text
 
 
+def save_text(text: str):
+    with open('save.txt', 'a') as file:
+        file.write(text)
+
+
 
 def main():
    # print("hi")
@@ -32,6 +37,8 @@ def main():
 
     parsed_text = filter_text(text, user_keyword)
     print(parsed_text)
+
+    save_text(parsed_text)
 
     
 
